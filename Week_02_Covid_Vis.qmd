@@ -40,10 +40,16 @@ ggplot(covid_data_count,aes(x = Cases, y = Deaths, color = race)) + geom_point()
 The plot shows the relationship between the number of Covid cases and deaths and colored by races. According to the plot, most points clustered at where the number of cases is in the interval [0e+00, 1e+06] and the number of deaths is in the interval [0, 20000]. At the same time, there is a clear positive relationship between Covid Cases and Deaths. 
 
 2. Are there any conclusions you can draw?
-A possible conclusion can be drawn from the plot above is that as the number of Covid cases rises, the number of deaths will also increase. 
+A possible conclusion can be drawn from the plot above is that as the number of total Covid cases rises, the number of total deaths will also increase. 
 
 3. What were you not able to do due to not having the R knowledge?
 The thing that I'm not able to do due to not having the R knowledge is finding the equation that can best describe the relationship between the number of Covid cases and deaths, which can be used to make predictions. 
 
 4. What other data would be useful to better understand this data?
 The data that would be useful to better understand this data include the number of people who are vaccinated everyday, the number of people who are quarantined everyday, and the number of people who have recovered from Covid everyday. 
+
+Some other plots ...
+```{r sop}
+ggplot(covid_data_count,aes(x = race, y = Cases, color = race)) + geom_boxplot()
+ggplot(covid_data_count, aes(x = Hosp, y = Deaths, color = state_name)) + geom_point()
+```

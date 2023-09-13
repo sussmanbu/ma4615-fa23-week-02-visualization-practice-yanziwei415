@@ -163,10 +163,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>The plot shows the relationship between the number of Covid cases and deaths and colored by races. According to the plot, most points clustered at where the number of cases is in the interval [0e+00, 1e+06] and the number of deaths is in the interval [0, 20000]. At the same time, there is a clear positive relationship between Covid Cases and Deaths.</p>
 <ol start="2" type="1">
-<li><p>Are there any conclusions you can draw? A possible conclusion can be drawn from the plot above is that as the number of Covid cases rises, the number of deaths will also increase.</p></li>
+<li><p>Are there any conclusions you can draw? A possible conclusion can be drawn from the plot above is that as the number of total Covid cases rises, the number of total deaths will also increase.</p></li>
 <li><p>What were you not able to do due to not having the R knowledge? The thing that I’m not able to do due to not having the R knowledge is finding the equation that can best describe the relationship between the number of Covid cases and deaths, which can be used to make predictions.</p></li>
 <li><p>What other data would be useful to better understand this data? The data that would be useful to better understand this data include the number of people who are vaccinated everyday, the number of people who are quarantined everyday, and the number of people who have recovered from Covid everyday.</p></li>
 </ol>
+<p>Some other plots …</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(covid_data_count,<span class="fu">aes</span>(<span class="at">x =</span> race, <span class="at">y =</span> Cases, <span class="at">color =</span> race)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 1385 rows containing non-finite values (`stat_boxplot()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Week_02_Covid_Vis_files/figure-html/sop-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(covid_data_count, <span class="fu">aes</span>(<span class="at">x =</span> Hosp, <span class="at">y =</span> Deaths, <span class="at">color =</span> state_name)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 22585 rows containing missing values (`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Week_02_Covid_Vis_files/figure-html/sop-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 </main>
 <!-- /main column -->
